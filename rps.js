@@ -41,3 +41,16 @@ function getRandomChoice() {
 function isGameOver() { 
     return playerScore === 5 || computerScore === 5
 }
+
+function updateScore() {
+    if (roundWinner === 'tie') {
+      scoreInfo.textContent = "It's a tie!"
+    } else if (roundWinner === 'player') {
+      scoreInfo.textContent = 'You won!'
+    } else if (roundWinner === 'computer') {
+      scoreInfo.textContent = 'You lost!'
+    }
+  
+    playerScorePara.textContent = `Player: ${playerScore}`
+    computerScorePara.textContent = `Computer: ${computerScore}`
+  }
