@@ -53,4 +53,24 @@ function updateScore() {
   
     playerScorePara.textContent = `Player: ${playerScore}`
     computerScorePara.textContent = `Computer: ${computerScore}`
+}
+  
+function updateScoreMessage(winner, playerSelection, computerSelection) {
+    if (winner === 'player') {
+      scoreMessage.textContent = `${capitalizeFirstLetter(
+        playerSelection
+      )} beats ${computerSelection.toLowerCase()}`
+      return
+    }
+    if (winner === 'computer') {
+      scoreMessage.textContent = `${capitalizeFirstLetter(
+        playerSelection
+      )} is beaten by ${computerSelection.toLowerCase()}`
+      return
+    }
+  
+    scoreMessage.textContent = `${capitalizeFirstLetter(
+      playerSelection
+    )} ties with ${computerSelection.toLowerCase()}`
   }
+  
