@@ -14,3 +14,13 @@
     justify-content: center;
     align-items: center;
 }
+
+/* score board*/
+.score{
+    display:flex;
+    width:30vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
