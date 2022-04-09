@@ -25,12 +25,14 @@
     z-index: 1;
 }
 
+/* score itself*/
 .p-count, .count{
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
 
+/*displaying buttons inline*/ 
 .options{
     display:flex;
     width: 50vw;
@@ -38,3 +40,15 @@
     margin-top: 2rem;
 }
 
+/* style buttons*/
+.rock, .paper, .scissor{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border:none;
+    cursor: pointer;
+
+}
