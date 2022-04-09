@@ -18,6 +18,26 @@ const game = () => {
     //parameters(options) the computer has
     const computerOptions = ["rock", "paper", "scissor"];
 
+    //Function to start playing the game
+    playerOptions.forEach(optiom => {
+      Option.addEventListener('click', function(){
+        const movesLeft = document.querySelector("movesleft");
+        moves++;
+        movesLeft.innerText = `Moves Left: ${10-moves}`;
+
+        const choiceNumber = Math.floor(Math.random()*3);
+        const computerChoice = computerOptions[choiceNumber];
+
+        //Function to check winner
+        winner(this.innerText, computerChoice)
+
+        //Calling gameover function after 10 moves
+        if(moves ==10){
+          gameOver(playerOptions,movesLeft)
+        }
+      })
+    })
+
   }
 }
   
