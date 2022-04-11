@@ -14,12 +14,12 @@ const game = () => {
     const scissorBtn = document.querySelector(".scissor");
 
     //parameters(options) we have as a player
-    const playerOptions = [rockBtm, paperBtn, scissorBtn];
+    const playerOptions = [rockBtn, paperBtn, scissorBtn];
     //parameters(options) the computer has
     const computerOptions = ["rock", "paper", "scissor"];
 
     //Function to start playing the game
-    playerOptions.forEach(optiom => {
+    playerOptions.forEach(option => {
       Option.addEventListener('click', function(){
         const movesLeft = document.querySelector("movesleft");
         moves++;
@@ -43,6 +43,24 @@ const game = () => {
   //Function to decide the winner
     const winner = (player, computer) => {
       const result = document.querySelector(".result");
+      const playerScoreBoard = document.querySelector(".p-count");
+      const computerScoreBoard = document.querySelector(".c-count");
+      player = player.toLowerCase();
+
+      if(player === computer){
+        result.textContent = "Tie";
+      }
+      else if(player == "rock"){
+        if(computer == "paper"){
+          result.textContent = "Computer Won";
+          computerScore++;
+          computerScoreBoard.textContent = playerScore;
+        }else{
+          result.textContent = "Player Won";
+          playerScore++;
+          playerScoreBoard.textContent = playerScore;
+        }
+      }
     }
 
 
