@@ -39,5 +39,14 @@ const game = () => {
     })
 
   }
+
+  //Function to decide the winner
+    const winner = (player, computer) => {
+      const result = document.querySelector(".result");
+    }
+
+
+
+
 }
   
