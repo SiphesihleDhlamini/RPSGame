@@ -82,6 +82,29 @@ const game = () => {
         }
       }
 
+      //Function to run when the game is over
+      const gameOver = (playerOptions, movesLeft) => {
+
+        const chooseMove = document.querySelector(".move");
+        const result = document.querySelector(".result");
+        const reloadBtn = document.querySelector(".reload");
+
+        playerOptions.forEach(option => {
+          option.style.display = "none";
+        })
+
+        chooseMove.innerText = "Game Over!!!";
+        movesLeft.style.display = "none";
+
+        if(playerScore > computerScore){
+          result.style.fontSize = "2rem";
+          result.style.innerText = "2rem";
+          result.style.color = "2rem";
+
+
+        }
+      }
+
 
 
 
