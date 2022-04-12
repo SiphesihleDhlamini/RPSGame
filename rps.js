@@ -98,20 +98,31 @@ const game = () => {
 
         if(playerScore > computerScore){
           result.style.fontSize = "2rem";
-          result.style.innerText = "2rem";
-          result.style.color = "2rem";
-
-
+          result.style.innerText = "You Win";
+          result.style.color = "violet";
         }
+        else if(playerScore == computerScore){
+          result.style.fontSize = "2rem";
+          result.style.innerText = "It's a Tie, how about you try again";
+          result.style.color = "yellow";
+        }
+        else if(playerScore < computerScore){
+          result.style.fontSize = "2rem";
+          result.style.innerText = "You lost my friend, The computer beat you";
+          result.style.color = "Red";
+        }
+        reloadBtn.innerText = "Restart";
+        reloadBtn.style.display = "flex";
+        reloadBtn.addEventListener("click", () => {
+          window.location.reload();
+        })
       }
 
-
-
-
-
-      
+      ///Calling playGame function inside game
+      playGame();
     }
-
+//Calling the mai function (game)
+game();
 
 
 
