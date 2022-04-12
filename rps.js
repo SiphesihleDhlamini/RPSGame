@@ -61,6 +61,12 @@ const game = () => {
           playerScoreBoard.textContent = playerScore;
         }
       }
+
+
+
+
+
+      
     }
 
 
